@@ -1,0 +1,7 @@
+{
+  "name": "Moody",
+  "description": "AI-powered music recommender that matches your mood with the perfect YouTube playlist, featuring personalized suggestions and global hits.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
