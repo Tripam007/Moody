@@ -63,7 +63,7 @@ const Player: React.FC<{ song: Song | null }> = ({ song }) => {
   }, [song]);
 
   if (!song) return null;
-  const videoId = getYoutubeId(song.youtubeUrl || song.youtubeQuery || '');
+  const videoId = getYoutubeId(song.youtubeUrl || '');
   
   if (!videoId || showFallback) {
     return (
@@ -99,7 +99,7 @@ const Player: React.FC<{ song: Song | null }> = ({ song }) => {
         key={videoId}
         ref={iframeRef}
         className="w-full h-full"
-        src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1&origin=${window.location.origin}`}
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
         title={song.title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
